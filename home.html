@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery-2.1.1.min.js"></script>
+<script src="homeScript.js"></script>
+<style>
+    input[type='submit'], button, [aria-label]{
+      cursor: pointer;
+    }
+    #spoiler{
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+
+<div id="spoiler" role="aria-hidden">
+  <form action="javascript:void(0);" method="POST" id="saveEdit">
+    <input type="text" id="edit-name">
+    <input type="submit" value="Edit" /> <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
+  </form>
+</div>
+
+<p id="counter"></p>
+
+<table>
+  <tr>
+    <th>Post Title</th>
+    <th>Album Title</th>
+    <th>User Name</th>
+  </tr>
+    <tbody id="appItems">
+    </tbody>
+</table>
+
+</body>
+</html>
